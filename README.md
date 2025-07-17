@@ -1,5 +1,46 @@
+# 🧪 Pipeline ETL avec Databricks – Ventes E-commerce
+
+Ce projet illustre la création complète d’un pipeline **ETL (Extract, Transform, Load)** utilisant **Databricks**, **PySpark** et **Delta Lake**, en suivant l’architecture **Bronze → Silver → Gold**.  
+Il traite un jeu de données de ventes e-commerce provenant du monde réel : le [Online Retail II dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II).
 
 ---
+
+## 📦 Jeu de Données
+
+- **Source :** UCI Machine Learning Repository  
+- **Format :** Excel (`.xlsx`)  
+- **Champs :** `Invoice`, `StockCode`, `Description`, `Quantity`, `InvoiceDate`, `Price`, `Customer_ID`, `Country`
+
+---
+
+## 🏗️ Architecture du Pipeline
+
+| Couche        | Description |
+|---------------|-------------|
+| 🟫 **Bronze** | Ingestion brute + horodatage d’audit |
+| ⚪ **Silver** | Nettoyage, dédoublonnage, typage, enrichissement |
+| 🟨 **Gold**   | Agrégation des indicateurs journaliers (chiffre d'affaires, volume, AOV) |
+
+---
+
+## ⚙️ Technologies Utilisées
+
+- 🧠 **Databricks** (Community Edition compatible)
+- 🐍 **PySpark** / Spark SQL
+- 💾 **Delta Lake** (gestion des versions, Z-Ordering, validation de schéma)
+- 🔧 **Git & GitHub** pour le versionnement
+
+---
+
+## 📁 Structure du Répertoire
+project-root/
+├── 01_bronze_ingestion.py # Ingestion brute
+├── 02_silver_cleaning.py # Nettoyage & transformation
+├── 03_gold_aggregation.py # Agrégation des KPIs
+├── data/
+│ └── online_retail_II.xlsx # Jeu de données source
+└── README.md
+
 
 ## 📊 Indicateurs calculés (Gold Layer)
 
@@ -34,7 +75,6 @@
 ## 👤 Auteur
 
 Réalisé par **MAGUIRAGA SEKOU** dans le cadre d'une démonstration professionnelle d’ingénierie des données.
-
 
 
 
