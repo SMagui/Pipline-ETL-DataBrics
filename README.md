@@ -34,9 +34,9 @@ Il traite un jeu de données de ventes e-commerce provenant du monde réel : le 
 
 ## 📁 Structure du Répertoire
 project-root/
-├── 01_bronze_ingestion.py # Ingestion brute
-├── 02_silver_cleaning.py # Nettoyage & transformation
-├── 03_gold_aggregation.py # Agrégation des KPIs
+├── 1_Etape_Bronze_Ingestion.ipynb # Ingestion brute
+├── 02_Etape_silver_Nettoyage.ipynb # Nettoyage & transformation
+├── 03_Etape_gold_Transformation.ipynb # Agrégation des KPIs
 ├── data/
 │ └── online_retail_II.xlsx # Jeu de données source
 └── README.md
